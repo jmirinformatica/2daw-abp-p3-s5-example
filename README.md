@@ -2,6 +2,6 @@
 
 Crea el fitxer `.env`.
 
-Instal·la les dependències `npm install`
+Instal·la les dependències: `npm install`
 
 Inicia l'aplicació: `npm run dev`

@@ -7,6 +7,7 @@ import { Routes, Route } from 'react-router-dom'
 import { OpenRoutes } from './components/OpenRoutes'
 import { Distance } from './components/Distance'
 import { Museums } from './components/Museums'
+import { GeminiAI } from './components/GeminiAI'
 import './App.css'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/routes" element={<OpenRoutes />} />
           <Route path="/distance" element={<Distance />} />
           <Route path="/museums" element={<Museums />} />
+          <Route path="/gemini" element={<GeminiAI/>} />
         </Route>
       </Routes>
     </>
