@@ -13,6 +13,7 @@ export const Header = () => {
             <li><Link to="/distance">Distance</Link></li>
             <li><Link to="/museums">Museums</Link></li>
             <li><Link to="/gemini">Gemini</Link></li>
+            <li><Link to="/mistral">Mistral</Link></li>
           </ul>
         </nav>
       </header>

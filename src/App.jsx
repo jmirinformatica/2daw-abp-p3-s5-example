@@ -8,6 +8,7 @@ import { OpenRoutes } from './components/OpenRoutes'
 import { Distance } from './components/Distance'
 import { Museums } from './components/Museums'
 import { GeminiAI } from './components/GeminiAI'
+import { MistralAI } from './components/MistralAI'
 import './App.css'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/distance" element={<Distance />} />
           <Route path="/museums" element={<Museums />} />
           <Route path="/gemini" element={<GeminiAI/>} />
+          <Route path="/mistral" element={<MistralAI/>} />
         </Route>
       </Routes>
     </>

@@ -9,7 +9,7 @@ export const GeminiAI = () => {
         const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
         const response = await ai.models.generateContent({
             model: "gemini-3-flash-preview",
-            contents: "Dona'm en català un descripció bonica, evocadora i detallada de Barcelona. Sigues breu i fes servir HTML per a formatar el text. No incloguis cap etiqueta d'encapçalament (h1, h2, etc.) ni cap etiqueta de paràgraf (p). Només el contingut formatat amb HTML. No incloguis cap altre text a part del contingut formatat amb HTML.",
+            contents: "Dona'm en català un descripció bonica, evocadora i detallada de Vilanova i la Geltrú. Sigues breu i fes servir HTML per a formatar el text. No incloguis cap etiqueta d'encapçalament (h1, h2, etc.) ni cap etiqueta de paràgraf (p). Només el contingut formatat amb HTML. No incloguis cap altre text a part del contingut formatat amb HTML.",
         });
         console.log("Response from Gemini:", response);
         setGeminiResponse(response);
@@ -19,11 +19,10 @@ export const GeminiAI = () => {
         fetchGeminiDescription();
     }, []);
 
-
     return (
         <main>
             <section>
-                <h2>Gemini IA</h2>
+                <h2>Gemini AI</h2>
                 <p dangerouslySetInnerHTML={{ __html: geminiResponse ? geminiResponse.text : "Loading Gemini AI description..." }}></p>
             </section>
         </main>
