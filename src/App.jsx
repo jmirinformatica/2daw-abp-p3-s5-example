@@ -9,6 +9,7 @@ import { Distance } from './components/Distance'
 import { Museums } from './components/Museums'
 import { GeminiAI } from './components/GeminiAI'
 import { MistralAI } from './components/MistralAI'
+import { GroqAI } from './components/GroqAI'
 import './App.css'
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/museums" element={<Museums />} />
           <Route path="/gemini" element={<GeminiAI/>} />
           <Route path="/mistral" element={<MistralAI/>} />
+          <Route path="/groq" element={<GroqAI/>} />
         </Route>
       </Routes>
     </>

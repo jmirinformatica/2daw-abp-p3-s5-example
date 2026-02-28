@@ -14,6 +14,7 @@ export const Header = () => {
             <li><Link to="/museums">Museums</Link></li>
             <li><Link to="/gemini">Gemini</Link></li>
             <li><Link to="/mistral">Mistral</Link></li>
+            <li><Link to="/groq">Groq</Link></li>
           </ul>
         </nav>
       </header>
