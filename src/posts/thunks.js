@@ -14,3 +14,21 @@ export const getPosts = (userId) => {
         }
     }
 };
+
+// export const getPosts = (userId) => {
+//     return async (dispatch) => {
+//         try {
+//             dispatch(setUserId(userId));
+
+//             const url = 'https://jsonplaceholder.typicode.com/posts';
+//             const response = await fetch(url);
+//             const posts = await response.json();
+
+//             //filter posts by userId if it's a number
+//             const filteredPosts = isNaN(userId) ? posts : posts.filter(post => post.userId === Number(userId));
+//             dispatch(setPosts(filteredPosts));
+//         } catch (error) {
+//             console.error("Error fetching posts:", error);
+//         }
+//     }
+// };
