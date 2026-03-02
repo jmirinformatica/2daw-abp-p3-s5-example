@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useSearchParams } from "react-router-dom";
 import { getPosts } from './thunks';
 
 export const PostsMenu = () => {
   const [searchParams, setSearchParams] = useSearchParams(window.location.search);
   const [userIdToSearch, setUserIdToSearch] = useState(searchParams.get("userId") || "");
+  const {availableUserIds = []} = useSelector((state) => state.postsSlice);
 
   const dispatch = useDispatch();
 
@@ -35,6 +36,9 @@ export const PostsMenu = () => {
                 onChange={(e) => setUserIdToSearch(e.target.value)}
             />
             <button onClick={search}>Search</button>
+            {
+              availableUserIds.length > 0 && <span>&nbsp;Found {availableUserIds.length} available user IDs</span>
+            }
         </aside>
         <Outlet />
     </>
