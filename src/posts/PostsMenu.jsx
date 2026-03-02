@@ -37,7 +37,7 @@ export const PostsMenu = () => {
             />
             <button onClick={search}>Search</button>
             {
-              availableUserIds.length > 0 && <span>&nbsp;Found {availableUserIds.length} available user IDs</span>
+              availableUserIds.length > 0 && <span>&nbsp;Found {availableUserIds.length} available user IDs: {availableUserIds.join(', ')}</span>
             }
         </aside>
         <Outlet />
